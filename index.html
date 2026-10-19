@@ -1,90 +1,302 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>F. &amp; J. YANG — Curated Wild Ingredients for Fine Dining</title>
-<meta name="description" content="F. &amp; J. YANG supplies curated wild ingredients to fine-dining kitchens in the San Francisco Bay Area. Saratoga, California.">
+<title>F. &amp; J. YANG — Wild Matsutake for Fine Dining</title>
+<meta name="description" content="F. &amp; J. YANG supplies wild matsutake (Tricholoma murrillianum) from the Oregon Cascades to fine-dining kitchens in the San Francisco Bay Area and Los Angeles: dry-cleaned, sliced, blast frozen at −30°C, in 100 g and 250 g bags. Minimum order 1,000 g, free shipping within the San Francisco Bay Area and Los Angeles. Free samples for Michelin-starred kitchens.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://fjyang.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="F. &amp; J. YANG">
-<meta property="og:title" content="F. &amp; J. YANG — Curated Wild Ingredients for Fine Dining">
-<meta property="og:description" content="Curated wild ingredients for fine-dining kitchens in the San Francisco Bay Area. Saratoga, California.">
+<meta property="og:title" content="F. &amp; J. YANG — Wild Matsutake for Fine Dining">
+<meta property="og:description" content="Wild matsutake from the Oregon Cascades: dry-cleaned, sliced, blast frozen at −30°C, in 100 g and 250 g bags. Free shipping within the San Francisco Bay Area and Los Angeles; free samples for Michelin-starred kitchens.">
 <meta property="og:url" content="https://fjyang.com/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="F. &amp; J. YANG">
-<meta name="twitter:description" content="Curated Wild Ingredients for Fine Dining">
+<meta name="twitter:title" content="F. &amp; J. YANG — Wild Matsutake">
+<meta name="twitter:description" content="Wild matsutake from the Oregon Cascades, blast frozen at −30°C in 100 g and 250 g bags.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"F. & J. YANG","email":"orders@fjyang.com","url":"https://fjyang.com/","founder":[{"@type":"Person","name":"Frank Yang"},{"@type":"Person","name":"Jennifer Xu"}],"address":{"@type":"PostalAddress","addressLocality":"Saratoga","addressRegion":"CA","postalCode":"95070","addressCountry":"US"}}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://fjyang.com/#org","name":"F. & J. YANG","email":"orders@fjyang.com","url":"https://fjyang.com/","slogan":"Curated Wild Ingredients for Fine Dining","founder":[{"@type":"Person","name":"Frank Yang"},{"@type":"Person","name":"Jennifer Xu"}],"address":{"@type":"PostalAddress","addressLocality":"Saratoga","addressRegion":"CA","postalCode":"95070","addressCountry":"US"},"areaServed":["San Francisco Bay Area","Los Angeles"]},
+{"@type":"Product","@id":"https://fjyang.com/#matsutake","name":"Wild Matsutake (Tricholoma murrillianum), Grade #2 Peak Aroma","description":"Wild-foraged matsutake from the Oregon Cascades. Dry-cleaned and sliced 3–5 mm, single-layer blast frozen at −30°C (−22°F), and chamber-vacuum packed in 100 g or 250 g bags. Minimum order 1,000 g; free shipping within the San Francisco Bay Area and Los Angeles.","category":"Wild mushrooms","brand":{"@id":"https://fjyang.com/#org"},"url":"https://fjyang.com/#matsutake","offers":[
+{"@type":"Offer","name":"Wild Matsutake, 100 g bag","price":"18.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
+{"@type":"Offer","name":"Wild Matsutake, 250 g bag","price":"42.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":4,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}}
+]}
+]}
 </script>
 <style>
-  :root { --ink:#111; --muted:#6b6b6b; --rule:#d9d9d9; }
+  :root { --ink:#111; --muted:#6b6b6b; --rule:#d9d9d9; --serif:"Cormorant Garamond","Times New Roman",Georgia,serif; }
   *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-  html { -webkit-text-size-adjust:100%; }
+  html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
   body {
-    min-height:100vh; min-height:100svh;
-    display:flex; flex-direction:column;
     background:#fff; color:var(--ink);
     font-family:"Inter",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-    font-weight:300; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    font-weight:300; line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   }
+  img { display:block; max-width:100%; height:auto; }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
   .skip { position:absolute; left:-9999px; }
-  .skip:focus { left:1rem; top:1rem; padding:.5rem .75rem; background:#fff; outline:1px solid var(--ink); }
-  main {
+  .skip:focus { left:1rem; top:1rem; padding:.5rem .75rem; background:#fff; outline:1px solid var(--ink); z-index:10; }
+  a:focus-visible { outline:1px solid var(--ink); outline-offset:6px; }
+
+  /* ---------- Hero (first screen) ---------- */
+  .hero {
+    min-height:100vh; min-height:100svh; display:flex; flex-direction:column; text-align:center;
+  }
+  .hero-inner {
     flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    text-align:center; padding:clamp(4rem,12vh,9rem) 1.5rem;
+    padding:clamp(4rem,12vh,9rem) 1.5rem 2rem;
   }
   h1 {
-    font-family:"Cormorant Garamond","Times New Roman",Georgia,serif;
-    font-weight:400; font-size:clamp(2.1rem,6.2vw,4.4rem);
+    font-family:var(--serif); font-weight:400; font-size:clamp(2.1rem,6.2vw,4.4rem);
     letter-spacing:.32em; margin-right:-.32em; /* optically re-centre tracked text */
     line-height:1.1; white-space:nowrap;
   }
   .rule { width:2.5rem; height:1px; background:var(--ink); border:0; margin:clamp(2rem,5vh,3rem) auto; }
   .tagline {
-    font-family:"Cormorant Garamond","Times New Roman",Georgia,serif;
-    font-style:italic; font-weight:400; font-size:clamp(1.15rem,2.4vw,1.6rem);
+    font-family:var(--serif); font-style:italic; font-weight:400; font-size:clamp(1.15rem,2.4vw,1.6rem);
     letter-spacing:.02em; line-height:1.4;
   }
-  .contact { margin-top:clamp(2.75rem,7vh,4.5rem); }
-  .contact a {
+  .actions { margin-top:clamp(2.75rem,7vh,4.5rem); display:flex; flex-direction:column; align-items:center; gap:1.75rem; }
+  .btn {
+    display:inline-block; color:#fff; background:var(--ink); text-decoration:none;
+    font-size:.75rem; font-weight:400; letter-spacing:.22em; text-transform:uppercase;
+    padding:1.05rem 2.1rem 1rem; border:1px solid var(--ink); transition:background .3s ease,color .3s ease;
+  }
+  .btn:hover { background:#fff; color:var(--ink); }
+  .btn-outline { background:#fff; color:var(--ink); }
+  .btn-outline:hover { background:var(--ink); color:#fff; }
+  .btn-row { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; }
+  .link {
     color:var(--ink); text-decoration:none; font-size:.8125rem; letter-spacing:.2em;
     text-transform:uppercase; padding-bottom:.35rem;
     border-bottom:1px solid var(--rule); transition:border-color .3s ease;
   }
-  .contact a:hover { border-bottom-color:var(--ink); }
-  a:focus-visible { outline:1px solid var(--ink); outline-offset:6px; }
-  footer {
-    padding:2rem 1.5rem 2.5rem; text-align:center; color:var(--muted);
+  .link:hover { border-bottom-color:var(--ink); }
+  .hero-note {
+    padding:2rem 1.5rem 2.5rem; color:var(--muted);
     font-size:.6875rem; letter-spacing:.22em; text-transform:uppercase; line-height:2.1;
   }
-  footer p + p { margin-top:.25rem; }
+  .hero-note a { color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); }
+  .hero-note a:hover { color:var(--ink); }
   .sep { display:inline-block; margin:0 .7em; }
+  .nc { text-transform:none; }
+  .nw { white-space:nowrap; }
+
+  /* ---------- Shared section type ---------- */
+  .label { font-size:.6875rem; font-weight:400; letter-spacing:.26em; text-transform:uppercase; color:var(--muted); }
+  h2 { font-family:var(--serif); font-weight:400; font-size:clamp(2rem,4.2vw,3.1rem); letter-spacing:.04em; line-height:1.15; margin-top:1.1rem; }
+  .latin { font-family:var(--serif); font-style:italic; font-size:clamp(1.1rem,1.8vw,1.35rem); margin-top:.35rem; }
+
+  /* ---------- Forest band ---------- */
+  .band { margin:0; }
+  .band img { width:100%; height:clamp(16rem,52vw,40rem); object-fit:cover; object-position:50% 45%; filter:saturate(.85); }
+  .band figcaption { text-align:center; margin-top:1rem; padding:0 1.5rem; }
+
+  /* ---------- Product ---------- */
+  .product { max-width:72rem; margin:0 auto; padding:clamp(5rem,12vw,9rem) 1.5rem clamp(4rem,9vw,7rem); }
+  .product-head { text-align:center; margin-bottom:clamp(3rem,7vw,5rem); }
+  .product-head .rule { margin:clamp(1.75rem,4vw,2.5rem) auto 0; }
+  .product-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(2.5rem,6vw,5.5rem); align-items:start; }
+  .product-grid > figure { margin:0; }
+  .specs { border-top:1px solid var(--rule); }
+  .specs div { display:grid; grid-template-columns:8.5rem 1fr; gap:1rem; padding:1.15rem 0; border-bottom:1px solid var(--rule); }
+  .specs dt { font-size:.6875rem; font-weight:400; letter-spacing:.24em; text-transform:uppercase; color:var(--muted); padding-top:.3rem; }
+  .specs dd { font-size:.9375rem; }
+  .specs dd small { display:block; color:var(--muted); font-size:.8125rem; margin-top:.15rem; }
+  .benefits { margin-top:2rem; font-size:.9375rem; }
+  .kitchen { margin-top:2.5rem; padding-top:2rem; border-top:1px solid var(--ink); }
+  .kitchen p:last-child { font-family:var(--serif); font-style:italic; font-size:clamp(1.2rem,1.9vw,1.45rem); line-height:1.45; margin-top:.75rem; }
+  .gallery { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1rem,3vw,2rem); margin-top:clamp(2.5rem,6vw,4.5rem); }
+  .gallery figure { margin:0; }
+  .gallery img, .product-grid img { width:100%; }
+  .illus { margin-top:1rem; color:var(--muted); font-size:.75rem; letter-spacing:.04em; text-align:center; }
+
+  /* ---------- Our story ---------- */
+  .story { max-width:40rem; margin:0 auto; padding:clamp(5rem,12vw,9rem) 1.5rem 0; }
+  .story-head { text-align:center; margin-bottom:clamp(2.5rem,6vw,3.75rem); }
+  .story-head .rule { margin:clamp(1.75rem,4vw,2.5rem) auto 0; }
+  .story-body p { font-size:1.0625rem; line-height:1.85; }
+  .story-body p + p { margin-top:1.4rem; }
+  .story .signed { font-family:var(--serif); font-style:italic; font-size:clamp(1.25rem,2vw,1.5rem); text-align:right; margin-top:2.5rem; }
+
+  /* ---------- Order ---------- */
+  .order { padding:clamp(4.5rem,10vw,8rem) 1.5rem; text-align:center; border-top:1px solid var(--rule); }
+  .order-head .rule { margin:clamp(1.75rem,4vw,2.5rem) auto 0; }
+  .cards { max-width:55rem; margin-left:auto; margin-right:auto; display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.25rem,3vw,2rem); margin-top:clamp(2.75rem,6vw,4rem); }
+  .card { border:1px solid var(--rule); padding:clamp(2.25rem,4vw,3rem) 1.5rem; display:flex; flex-direction:column; align-items:center; }
+  .card h3 { font-family:var(--serif); font-weight:400; font-size:clamp(1.5rem,2.4vw,1.85rem); letter-spacing:.03em; line-height:1.2; margin-top:.9rem; }
+  .price { font-family:var(--serif); font-size:clamp(2.4rem,4vw,3rem); line-height:1; margin-top:1.75rem; }
+  .price span { font-family:"Inter",system-ui,sans-serif; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-left:.4rem; }
+  .min { font-size:.875rem; color:var(--muted); margin:1rem 0 2rem; }
+  .card .btn { margin-top:auto; min-width:10rem; }
+  .order-note { font-family:var(--serif); font-style:italic; font-size:clamp(1.15rem,2vw,1.4rem); margin-top:clamp(2.25rem,5vw,3rem); }
+  .order-note + .order-note { margin-top:.6rem; max-width:44rem; margin-left:auto; margin-right:auto; }
+  .order-note a { color:inherit; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.18em; }
+
+  /* ---------- Sample CTA ---------- */
+  .sample { text-align:center; padding:clamp(4.5rem,10vw,8rem) 1.5rem; border-top:1px solid var(--rule); }
+  .sample p.offer { font-family:var(--serif); font-style:italic; font-size:clamp(1.2rem,2.2vw,1.5rem); line-height:1.45; max-width:34rem; margin:1.5rem auto 0; }
+  .sample .actions { margin-top:2.75rem; }
+  .sample .hint { color:var(--muted); font-size:.75rem; letter-spacing:.04em; }
+
+  /* ---------- Footer ---------- */
+  footer { padding:3rem 1.5rem 2.75rem; text-align:center; color:var(--muted); border-top:1px solid var(--rule); }
+  .foot-main { font-size:.6875rem; letter-spacing:.22em; text-transform:uppercase; line-height:2.1; }
+  .foot-main a { color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule); }
+  .credits { max-width:48rem; margin:1.75rem auto 0; font-size:.6875rem; line-height:1.7; letter-spacing:.02em; }
+  .credits a { color:inherit; }
+
+  @media (max-width:820px) {
+    .product-grid { grid-template-columns:1fr; }
+    .cards { grid-template-columns:1fr; max-width:26rem; margin-left:auto; margin-right:auto; }
+  }
   @media (max-width:480px) {
     h1 { letter-spacing:.2em; margin-right:-.2em; }
-    footer { letter-spacing:.16em; }
-    .sep { display:block; height:0; overflow:hidden; }
+    .hero-note { letter-spacing:.16em; }
+    .hero-note .sep { display:block; height:0; overflow:hidden; }
+    .specs div { grid-template-columns:1fr; gap:.25rem; }
+    .specs dt { padding-top:0; }
+    .gallery { grid-template-columns:1fr; }
+    .btn { padding:1.05rem 1.6rem 1rem; letter-spacing:.18em; }
   }
-  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <main id="main">
-  <h1 aria-label="F. and J. Yang">F.&nbsp;&amp;&nbsp;J.&nbsp;YANG</h1>
-  <hr class="rule" aria-hidden="true">
-  <p class="tagline">Curated Wild Ingredients for Fine Dining</p>
-  <p class="contact"><a href="mailto:orders@fjyang.com">orders@fjyang.com</a></p>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1><span aria-hidden="true">F.&nbsp;&amp;&nbsp;J.&nbsp;YANG</span><span class="sr">F. and J. Yang</span></h1>
+      <hr class="rule" aria-hidden="true">
+      <p class="tagline">Curated Wild Ingredients for Fine Dining</p>
+      <div class="actions">
+        <div class="btn-row">
+          <a class="btn" href="mailto:orders@fjyang.com?subject=Sample%20request%3A%20Wild%20Matsutake&amp;body=Hello%20F.%20%26%20J.%20YANG%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20the%20two%20free%20sample%20bags%20of%20Wild%20Matsutake.%0D%0A%0D%0ARestaurant%20name%3A%0D%0AChef%20name%3A%0D%0ADelivery%20address%3A%0D%0A%0D%0AThank%20you.">Request a free sample</a>
+          <a class="btn btn-outline" href="#order">Order</a>
+        </div>
+        <a class="link" href="mailto:orders@fjyang.com">orders@fjyang.com</a>
+      </div>
+    </div>
+    <p class="hero-note"><a href="#matsutake">Now offering Wild Matsutake</a><span class="sep" aria-hidden="true">·</span> Oregon Cascades<span class="sep" aria-hidden="true">·</span> −30°C Blast Frozen<span class="sep" aria-hidden="true">·</span> 100<span class="nc">g</span> &amp; 250<span class="nc">g</span> Bags</p>
+  </header>
+
+  <figure class="band">
+    <img src="img/cascades-forest-1086.webp" width="1086" height="720" loading="lazy" decoding="async"
+         alt="Tall conifers fading into mist in an old-growth forest in the Oregon Cascades">
+    <figcaption class="label">Oregon Cascades</figcaption>
+  </figure>
+
+  <section class="story" id="story" aria-labelledby="story-title">
+    <div class="story-head">
+      <p class="label">F. &amp; J. YANG</p>
+      <h2 id="story-title">Our Story</h2>
+      <hr class="rule" aria-hidden="true">
+    </div>
+    <div class="story-body">
+      <p>My name is Frank Yang. My wife Jennifer and I are absolute Matsutake fanatics. We have tasted Matsutake from almost every producing region around the world.</p>
+      <p>My family has been in the Matsutake sourcing business since I was in the 5th grade, giving me professional expertise in grading and identifying top-quality mushrooms.</p>
+      <p>After moving to California, our greatest surprise was discovering the best and most aromatic Matsutake in the world right in the forests of Oregon. It has low water content and a firm texture. One bite, and the intense aroma goes straight to your head.</p>
+      <p>To get my hands on these fresh Matsutake, I drive back and forth between San Francisco and Oregon multiple times every year.</p>
+      <p>Unfortunately, fresh Matsutake can only be enjoyed for a short two months each year. That’s why, starting the year before last, we began researching ways to preserve this deliciousness so our friends could enjoy this ultimate delicacy at our home year-round.</p>
+      <p>This year, we finally locked in this exquisite flavor using -30°C (-22°F) blast freezing, allowing us to share it with more people—specifically, people who truly know their ingredients.</p>
+      <p>This is not my main profession, and I don’t want to treat it just as a business. What makes my wife and me most proud is that our names are on this premium product.</p>
+      <p>It is our greatest honor and pride to represent nature’s finest food, which is exactly what drives us to prepare this product so carefully.</p>
+      <p>When you receive this product, please treat this gift from nature with care. I guarantee that if you cook it seriously, and if it is your first time tasting our Matsutake, it will be an unforgettable experience for the rest of your life.</p>
+    </div>
+    <p class="signed">Frank Yang &amp; Jennifer Xu</p>
+  </section>
+
+  <section class="product" id="matsutake" aria-labelledby="matsutake-title">
+    <div class="product-head">
+      <p class="label">Now offering</p>
+      <h2 id="matsutake-title">Wild Matsutake</h2>
+      <p class="latin">Tricholoma murrillianum</p>
+      <hr class="rule" aria-hidden="true">
+    </div>
+
+    <div class="product-grid">
+      <figure>
+        <img src="img/matsutake-900.webp" srcset="img/matsutake-900.webp 900w, img/matsutake-1600.webp 1600w"
+             sizes="(max-width:820px) calc(100vw - 3rem), 560px" width="900" height="675" loading="lazy" decoding="async"
+             alt="Four whole wild matsutake mushrooms with ivory caps and earth-flecked stems on a forest floor of pine needles">
+      </figure>
+      <div>
+        <dl class="specs">
+          <div><dt>Origin</dt><dd>Wild-foraged in the Oregon Cascades</dd></div>
+          <div><dt>Grade</dt><dd>#2 · Peak Aroma<small>Our own grade, chosen for aroma</small></dd></div>
+          <div><dt>Prep</dt><dd>Dry-cleaned and sliced 3–5&nbsp;mm</dd></div>
+          <div><dt>Pack</dt><dd>Single-layer blast frozen at −30°C (−22°F), chamber-vacuum packed in 100&nbsp;g or 250&nbsp;g bags.</dd></div>
+        </dl>
+        <p class="benefits">No cleaning labor. No trim waste. Consistent aroma beyond the short fresh season.</p>
+        <div class="kitchen">
+          <p class="label">In the kitchen</p>
+          <p>Seared in butter or avocado oil, it carries its fat-soluble aroma into the dish and can take the rich centerpiece role on a menu — a plant-based alternative to the wagyu course.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <img src="img/matsutake-western-480.webp" srcset="img/matsutake-western-480.webp 480w, img/matsutake-western-800.webp 800w"
+             sizes="(max-width:480px) calc(100vw - 3rem), (max-width:1200px) 46vw, 552px" width="480" height="360" loading="lazy" decoding="async"
+             alt="Western matsutake growing among fallen leaves, one cap turned up to show white gills">
+      </figure>
+      <figure>
+        <img src="img/matsutake-cluster-480.webp" srcset="img/matsutake-cluster-480.webp 480w, img/matsutake-cluster-800.webp 800w"
+             sizes="(max-width:480px) calc(100vw - 3rem), (max-width:1200px) 46vw, 552px" width="480" height="360" loading="lazy" decoding="async"
+             alt="A group of young white matsutake laid out on leaf litter">
+      </figure>
+    </div>
+    <p class="illus">Wild matsutake in the forest. Illustrative photographs.</p>
+  </section>
+
+  <section class="order" id="order" aria-labelledby="order-title">
+    <div class="order-head">
+      <p class="label">Wild Matsutake</p>
+      <h2 id="order-title">Order</h2>
+      <hr class="rule" aria-hidden="true">
+    </div>
+    <div class="cards">
+      <article class="card" aria-labelledby="card-100-title">
+        <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
+        <h3 id="card-100-title">Wild Matsutake</h3>
+        <p class="price">$18<span>per bag</span></p>
+        <p class="min">Minimum order 10 bags (1,000&nbsp;g)</p>
+        <a class="btn" href="https://buy.stripe.com/6oUeVef36g1m42319b4ko00" aria-label="Order Wild Matsutake, 100 g bags">Order</a>
+      </article>
+      <article class="card" aria-labelledby="card-250-title">
+        <p class="label">250&nbsp;<span class="nc">g</span> bag</p>
+        <h3 id="card-250-title">Wild Matsutake</h3>
+        <p class="price">$42<span>per bag</span></p>
+        <p class="min">Minimum order 4 bags (1,000&nbsp;g)</p>
+        <a class="btn" href="https://buy.stripe.com/14A9AU7AE7uQcyzcRT4ko01" aria-label="Order Wild Matsutake, 250 g bags">Order</a>
+      </article>
+    </div>
+    <p class="order-note">Minimum order 1,000&nbsp;g. Free shipping within our delivery areas.</p>
+    <p class="order-note">We currently deliver only to the San Francisco Bay Area and the Los Angeles area, and cannot ship elsewhere for now. If you are outside these areas, please leave us a message at <a href="mailto:orders@fjyang.com">orders@fjyang.com</a>.</p>
+  </section>
+
+  <section class="sample" id="sample" aria-labelledby="sample-title">
+    <p class="label">For chefs</p>
+    <h2 id="sample-title">Request a free sample</h2>
+    <p class="offer">Two bags of Wild Matsutake, free, for <span class="nw">Michelin-starred</span> kitchens. Send us an address and we’ll ship them to you.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:orders@fjyang.com?subject=Sample%20request%3A%20Wild%20Matsutake&amp;body=Hello%20F.%20%26%20J.%20YANG%2C%0D%0A%0D%0AI%20would%20like%20to%20request%20the%20two%20free%20sample%20bags%20of%20Wild%20Matsutake.%0D%0A%0D%0ARestaurant%20name%3A%0D%0AChef%20name%3A%0D%0ADelivery%20address%3A%0D%0A%0D%0AThank%20you.">Request a free sample</a>
+      <p class="hint">Opens an email to orders@fjyang.com. Please include your restaurant, chef name and delivery address.</p>
+    </div>
+  </section>
 </main>
 <footer>
-  <p>Now offering Wild Matsutake<span class="sep" aria-hidden="true">·</span> Oregon Cascades<span class="sep" aria-hidden="true">·</span> −30°C Blast Frozen<span class="sep" aria-hidden="true">·</span> 100<span style="text-transform:none">g</span> Portions</p>
-  <p>Saratoga, California</p>
+  <p class="foot-main"><a href="mailto:orders@fjyang.com">orders@fjyang.com</a></p>
+  <p class="foot-main">Saratoga, California</p>
+  <p class="credits">Photographs: Oregon Cascades forest by Matt Betts / Oregon State University, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>. Matsutake by Peter Pearsall / U.S. Fish and Wildlife Service, public domain. Western matsutake by Alan Rockefeller, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Matsutake group by Ron Pastorino (Mushroom Observer), <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. All via Wikimedia Commons; cropped and resized.</p>
 </footer>
 </body>
 </html>
