@@ -23,9 +23,12 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://fjyang.com/#org","name":"F. & J. YANG","email":"orders@fjyang.com","url":"https://fjyang.com/","slogan":"With gratitude to nature, for its finest flavor.","founder":[{"@type":"Person","name":"Frank Yang"},{"@type":"Person","name":"Jennifer Xu"}],"address":{"@type":"PostalAddress","addressLocality":"Saratoga","addressRegion":"CA","addressCountry":"US"},"areaServed":["San Francisco Bay Area","Los Angeles"]},
-{"@type":"Product","@id":"https://fjyang.com/#matsutake","name":"Wild Matsutake (Tricholoma murrillianum), Grade #2 Peak Aroma","description":"Wild-foraged matsutake from the Oregon Cascades. Dry-cleaned and sliced 3–5 mm, single-layer blast frozen at −30°C (−22°F), and chamber-vacuum packed in 100 g or 250 g bags. Minimum order 1,000 g; free shipping within the San Francisco Bay Area and Los Angeles.","category":"Wild mushrooms","brand":{"@id":"https://fjyang.com/#org"},"url":"https://fjyang.com/#matsutake","offers":[
-{"@type":"Offer","name":"Wild Matsutake, 100 g bag","price":"18.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
-{"@type":"Offer","name":"Wild Matsutake, 250 g bag","price":"42.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":4,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}}
+{"@type":"Product","@id":"https://fjyang.com/#matsutake","name":"Wild Matsutake (Tricholoma murrillianum)","description":"Wild-foraged matsutake from the Oregon Cascades. Dry-cleaned and sliced 3–5 mm, single-layer blast frozen at −30°C (−22°F), and chamber-vacuum packed in 100 g or 250 g bags. Minimum order 1,000 g; free shipping within the San Francisco Bay Area and Los Angeles.","category":"Wild mushrooms","brand":{"@id":"https://fjyang.com/#org"},"url":"https://fjyang.com/#matsutake","offers":[
+{"@type":"Offer","name":"Wild Matsutake, Grade A, 100 g bag","price":"18.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
+{"@type":"Offer","name":"Wild Matsutake, Grade A, 250 g bag","price":"42.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":4,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
+{"@type":"Offer","name":"Wild Matsutake, Grade B, 100 g bag","price":"15.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
+{"@type":"Offer","name":"Wild Matsutake, Grade C, 100 g bag","price":"11.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}},
+{"@type":"Offer","name":"Wild Matsutake, Grade D, 100 g bag","price":"8.00","priceCurrency":"USD","eligibleQuantity":{"@type":"QuantitativeValue","minValue":10,"unitText":"bag"},"shippingDetails":{"@type":"OfferShippingDetails","shippingRate":{"@type":"MonetaryAmount","value":0,"currency":"USD"}},"url":"https://fjyang.com/#order","seller":{"@id":"https://fjyang.com/#org"}}
 ]}
 ]}
 </script>
@@ -135,6 +138,9 @@
   .price span { font-family:"Inter",system-ui,sans-serif; font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-left:.4rem; }
   .min { font-size:.875rem; color:var(--muted); margin:1rem 0 2rem; }
   .card .btn { margin-top:auto; min-width:10rem; }
+  .cards-3 { grid-template-columns:repeat(3,1fr); max-width:55rem; margin-top:clamp(1.25rem,3vw,2rem); }
+  .cards-3 .card { padding:clamp(2rem,3.5vw,2.5rem) 1.25rem; }
+  .cards-3 .price { font-size:clamp(2.1rem,3.4vw,2.5rem); }
   .order-note { font-family:var(--serif); font-style:italic; font-size:clamp(1.15rem,2vw,1.4rem); margin-top:clamp(2.25rem,5vw,3rem); }
   .order-note + .order-note { margin-top:.6rem; max-width:44rem; margin-left:auto; margin-right:auto; }
   .order-note a { color:inherit; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.18em; }
@@ -230,9 +236,9 @@
       <div>
         <dl class="specs">
           <div><dt>Origin</dt><dd>Wild-foraged in the Oregon Cascades</dd></div>
-          <div><dt>Grade</dt><dd>#2 · Peak Aroma<small>Our own grade, chosen for aroma</small></dd></div>
+          <div><dt>Grade</dt><dd>A · B · C · D<small>A is our top grade</small></dd></div>
           <div><dt>Prep</dt><dd>Dry-cleaned and sliced 3–5&nbsp;mm</dd></div>
-          <div><dt>Pack</dt><dd>Single-layer blast frozen at −30°C (−22°F), chamber-vacuum packed in 100&nbsp;g or 250&nbsp;g bags.</dd></div>
+          <div><dt>Pack</dt><dd>Single-layer blast frozen at −30°C (−22°F), chamber-vacuum packed. Grade A in 100&nbsp;g or 250&nbsp;g bags; grades B, C and D in 100&nbsp;g bags.</dd></div>
         </dl>
         <p class="benefits">No cleaning labor. No trim waste. Consistent aroma beyond the short fresh season.</p>
         <div class="kitchen">
@@ -266,17 +272,40 @@
     <div class="cards">
       <article class="card" aria-labelledby="card-100-title">
         <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
-        <h3 id="card-100-title">Wild Matsutake</h3>
+        <h3 id="card-100-title">Wild Matsutake, Grade A</h3>
         <p class="price">$18<span>per bag</span></p>
         <p class="min">Minimum order 10 bags (1,000&nbsp;g)</p>
-        <a class="btn" href="https://buy.stripe.com/6oUeVef36g1m42319b4ko00" aria-label="Order Wild Matsutake, 100 g bags">Order</a>
+        <a class="btn" href="https://buy.stripe.com/6oUeVef36g1m42319b4ko00" aria-label="Order Wild Matsutake, Grade A, 100 g bags">Order</a>
       </article>
       <article class="card" aria-labelledby="card-250-title">
         <p class="label">250&nbsp;<span class="nc">g</span> bag</p>
-        <h3 id="card-250-title">Wild Matsutake</h3>
+        <h3 id="card-250-title">Wild Matsutake, Grade A</h3>
         <p class="price">$42<span>per bag</span></p>
         <p class="min">Minimum order 4 bags (1,000&nbsp;g)</p>
-        <a class="btn" href="https://buy.stripe.com/14A9AU7AE7uQcyzcRT4ko01" aria-label="Order Wild Matsutake, 250 g bags">Order</a>
+        <a class="btn" href="https://buy.stripe.com/14A9AU7AE7uQcyzcRT4ko01" aria-label="Order Wild Matsutake, Grade A, 250 g bags">Order</a>
+      </article>
+    </div>
+    <div class="cards cards-3">
+      <article class="card" aria-labelledby="card-b-title">
+        <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
+        <h3 id="card-b-title">Wild Matsutake, Grade B</h3>
+        <p class="price">$15<span>per bag</span></p>
+        <p class="min">Minimum order 10 bags (1,000&nbsp;g)</p>
+        <a class="btn" href="https://buy.stripe.com/4gM3cw3kodTe1TVg454ko02" aria-label="Order Wild Matsutake, Grade B, 100 g bags">Order</a>
+      </article>
+      <article class="card" aria-labelledby="card-c-title">
+        <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
+        <h3 id="card-c-title">Wild Matsutake, Grade C</h3>
+        <p class="price">$11<span>per bag</span></p>
+        <p class="min">Minimum order 10 bags (1,000&nbsp;g)</p>
+        <a class="btn" href="https://buy.stripe.com/9B69AU6wA7uQ1TVcRT4ko03" aria-label="Order Wild Matsutake, Grade C, 100 g bags">Order</a>
+      </article>
+      <article class="card" aria-labelledby="card-d-title">
+        <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
+        <h3 id="card-d-title">Wild Matsutake, Grade D</h3>
+        <p class="price">$8<span>per bag</span></p>
+        <p class="min">Minimum order 10 bags (1,000&nbsp;g)</p>
+        <a class="btn" href="https://buy.stripe.com/bJe8wQ6wA5mI0PR4ln4ko04" aria-label="Order Wild Matsutake, Grade D, 100 g bags">Order</a>
       </article>
     </div>
     <p class="order-note">Minimum order 1,000&nbsp;g. Free shipping within our delivery areas.</p>
