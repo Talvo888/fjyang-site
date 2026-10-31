@@ -141,6 +141,8 @@
   .cards-3 { grid-template-columns:repeat(3,1fr); max-width:55rem; margin-top:clamp(1.25rem,3vw,2rem); }
   .cards-3 .card { padding:clamp(2rem,3.5vw,2.5rem) 1.25rem; }
   .cards-3 .price { font-size:clamp(2.1rem,3.4vw,2.5rem); }
+  .pack { max-width:34rem; margin:clamp(2.75rem,6vw,4rem) auto 0; }
+  .pack img { display:block; width:100%; height:auto; border:1px solid var(--rule); }
   .order-note { font-family:var(--serif); font-style:italic; font-size:clamp(1.15rem,2vw,1.4rem); margin-top:clamp(2.25rem,5vw,3rem); }
   .order-note + .order-note { margin-top:.6rem; max-width:44rem; margin-left:auto; margin-right:auto; }
   .order-note a { color:inherit; text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.18em; }
@@ -269,6 +271,9 @@
       <h2 id="order-title">Order</h2>
       <hr class="rule" aria-hidden="true">
     </div>
+    <figure class="pack">
+      <img src="img/matsutake-pack-1200.jpg" width="768" height="1024" loading="lazy" decoding="async" alt="Wild matsutake, sliced and frozen at -30°C">
+    </figure>
     <div class="cards">
       <article class="card" aria-labelledby="card-100-title">
         <p class="label">100&nbsp;<span class="nc">g</span> bag</p>
